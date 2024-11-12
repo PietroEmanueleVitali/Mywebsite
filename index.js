@@ -111,5 +111,5 @@ const ips = [
   '35.157.117.28'         
 ];
 
-createServers(ips, 3000);
+createServers(ips, 10000);
 // app.listen (3000);
