@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/projects-components/grid.css">
+    <link rel="stylesheet" href="Styles/projects-components/tittle-text.css">
+    <link rel="stylesheet" href="Styles/projects-components/cards.css">
+    <link rel="stylesheet" href="Styles/navbar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Styles/fonts.css">
+
+    <title>Projects</title>
+</head>
+<body>
+    <div id="grid">
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <header id="side-bar">
+            <%- include('./components/navbar.ejs') %>
+        </header>
+    </div>
+    
+    <span class="span-button" style="font-size:30px;cursor:pointer" onclick="openNav()"><p style="color: white; border: 1px solid rgba(0, 0, 0, .2); padding: 10px; margin: 0px; background-color: #D4F6FF;"> &#9776; </p></span>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "100%";
+              document.getElementById('side-bar').style.display = 'grid';
+              document.getElementById('side-bar').style.height = '95vh';
+              // background-color: #D4F6FF;
+    // position: fixed;
+    // display: grid;
+    // grid-template-rows: 0.75fr 0.01fr 1.5fr 0.5fr;
+    // height: 100vh;
+    // width: 30vh;
+    // grid-column-start: 1;
+    // grid-column-end: 2;
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById('side-bar').style.display = 'none';
+              document.getElementById('side-bar').style.height = '0';
+            }
+            </script>
+        
+        <div class="title-and-projects">
+          <div class="title-text-button">
+            <h1 class="merriweather-black-skills">Welcome to my web development demos!</h1>
+            <p class="source-sans-3-presentation-single-skills-p">This projects are made to highlight my skills in creating responsive, interactive UIs, integrating APIs, and building efficient back-end features. It’s a snapshot of my approach to delivering clean, engaging web experiences.</p>
+           
+           <form action="/contacts" type="GET" style="width:100%; display: flex; justify-content:center;">
+            <button class="presentation-orange-button" type="submit">
+                    <div class="original">contact</div>
+                    <div class="letters">
+                            <span>p</span>
+                            <span>a</span>
+                            <span>g</span>
+                            <span>e</span>
+                    </div>
+                  </button>
+            </form>
+          
+          </div>
+
+          <hr style="margin-bottom: 5%;">
+
+          <div class="cards-position">
+            <div class="card">
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    <svg width="50" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13L3 14L6 11H10L13 14L16 13L15.248 4.7284C15.1076 3.18316 13.812 2 12.2604 2H3.73964C2.18803 2 0.89244 3.18316 0.751964 4.72839L0 13ZM12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6ZM12 8C12 8.55228 11.5523 9 11 9C10.4477 9 10 8.55228 10 8C10 7.44772 10.4477 7 11 7C11.5523 7 12 7.44772 12 8ZM5 8C6.10457 8 7 7.10457 7 6C7 4.89543 6.10457 4 5 4C3.89543 4 3 4.89543 3 6C3 7.10457 3.89543 8 5 8Z" fill="#000000"></path> </g></svg>
+                    <strong>The simon game</strong> 
+                  </div>
+                </div>
+                <div class="front">
+                  
+                  <div class="img">
+                   
+                  </div>
+            
+                  <div class="front-content">
+                    <div>
+                      <small class="badge">Js</small>
+                      <small class="badge">Html</small>
+                      <small class="badge">css</small>
+                    </div>
+
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          Handling events, design etc.
+                        </p>
+                      </div>
+                      <div class="container-button">
+                        <button class="card-orange-button">
+                          <div class="original">see</div>
+                          <div class="letters">
+                                  <span>t</span>
+                                  <span>r</span>
+                                  <span>y</span> 
+                          </div>
+                        </button>
+
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    
+                    <strong>Coming soon</strong>
+                  </div>
+                </div>
+                <div class="front">
+                  
+                  <div class="img">
+                    
+                  </div>
+            
+                  <div class="front-content">
+                    <small class="badge">Node.js</small>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>cosa ho imparato</strong>
+                        </p>
+                        
+                      </div>
+                      <p class="card-footer">
+                        <button> </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="back">
+                  <div class="back-content">
+                    
+                    <strong>Coming soon</strong>
+                  </div>
+                </div>
+                <div class="front">
+                  
+                  <div class="img">
+                    
+                  </div>
+            
+                  <div class="front-content">
+                    <small class="badge">React</small>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>cosa ho imparato</strong>
+                        </p>
+                        
+                      </div>
+                      <p class="card-footer">
+                       <button></button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          <!-- <div>
+              https://getbootstrap.com/docs/5.3/examples/album/
+          </div> -->
+        </div>
+        
+        
+        <footer>
+          <div id="foot">
+              <p>&copy; 2024 Pietro Emanuele Vitali. All rights reserved.</p>
+              <p>We value your privacy. This website does not collect, store, or use your personal data.</p>
+          </div>
+          
+      </footer>
+
+</body>
+</html>

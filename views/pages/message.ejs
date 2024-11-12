@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="Styles/message-components/grid.css">
+    <link rel="stylesheet" href="Styles/message-components/get-in-touch.css">
+    <link rel="stylesheet" href="Styles/message-components/inputs.css">
+    <link rel="stylesheet" href="Styles/message-components/form-style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Styles/fonts.css">
+
+    <title>Send message</title>
+</head>
+<body>
+    <div id="root">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <header id="side-bar">
+                <%- include('./components/navbar.ejs') %>
+            </header>
+        </div>
+        
+        <span class="span-button" style="font-size:30px;cursor:pointer" onclick="openNav()"><p style="margin-top: 0px; color: white; border: 1px solid rgba(0, 0, 0, .2); padding: 10px; background-color: #D4F6FF;"> &#9776; </p></span>
+    
+            <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "100%";
+                  document.getElementById('side-bar').style.display = 'grid';
+                  document.getElementById('side-bar').style.height = '95vh';
+                  // background-color: #D4F6FF;
+        // position: fixed;
+        // display: grid;
+        // grid-template-rows: 0.75fr 0.01fr 1.5fr 0.5fr;
+        // height: 100vh;
+        // width: 30vh;
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById('side-bar').style.display = 'none';
+                  document.getElementById('side-bar').style.height = '0';
+                }
+                </script>
+
+
+    <div class="right-container-flex">
+        <div class="right-container">
+            
+            <div class="get-in-touch">
+                <div class="get-in-touch-title" style="margin-bottom: 2%;">
+                    <svg height="50" width="15" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="0" x2="0" y2="200" style="stroke:#FFDDAE ;stroke-width:5" />
+                    </svg>
+                    <h1 class="merriweather-black-skills">Get in touch</h1>
+                </div>
+                <p class="source-sans-3-presentation-single-skills-p">I'm excited about the possibility of working with your team. Whether you have questions or feedback simply complete the fields, and i'll get back to you as soon as possible! </p>
+            </div>
+            
+            <div class="separation">
+                <hr />
+            </div>
+
+
+            <div class="center-inputs">
+                <% if(locals.sent === 'yes'){ %>
+                    <div class="redirect-message">
+                        <h1>Thank you for your time</h1>
+                        <p>You are going to be redirected to the home page in: </p>
+                        <p id="countdown">5</p>
+                        <script>
+                            setTimeout(() => {
+                                document.getElementById('countdown').innerHTML = '4';
+                                setTimeout(() => {
+                                document.getElementById('countdown').innerHTML = '3';
+                                setTimeout(() => {
+                                document.getElementById('countdown').innerHTML = '2';
+                                setTimeout(() => {
+                                document.getElementById('countdown').innerHTML = '1';
+                            }, 1000);
+                            }, 1000);
+                            }, 1000);
+                            }, 1000);
+                       
+                        
+                      
+                            
+                       
+                          
+                        </script>
+
+                    </div>
+                    <script>
+                        setTimeout(() => {
+                            window.location.href = '/';
+                        }, 5000); 
+                        var ciao=2;
+                    </script>
+
+                    <% }else { %>
+
+                <div class="formbold-main-wrapper">
+
+                    <div class="formbold-form-wrapper">
+                      <form action="/message" method="POST">
+                          <div class="formbold-input-flex">
+                            <div>
+                                <input
+                                type="text"
+                                name="firstname"
+                                id="firstname"
+                                placeholder="Your name*"
+                                class="formbold-form-input" required
+                                />
+                                <label for="firstname" class="formbold-form-label"> First name </label>
+                            </div>
+                            <div>
+                                <input
+                                type="text"
+                                name="lastname"
+                                id="lastname"
+                                placeholder="Your surname*"
+                                class="formbold-form-input" required
+                                />
+                                <label for="lastname" class="formbold-form-label"> Last name </label>
+                            </div>
+                          </div>
+                  
+                          <div class="formbold-input-flex">
+                            <div>
+                                <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your email*"
+                                class="formbold-form-input" required
+                                />
+                                <label for="email" class="formbold-form-label"> Mail </label>
+                            </div>
+                            <div>
+                                <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                placeholder="Your phone number"
+                                class="formbold-form-input"
+                                />
+                                <label for="phone" class="formbold-form-label"> Phone </label>
+                            </div>
+                          </div>
+                  
+                          <div class="formbold-textarea">
+                              <textarea
+                                  rows="6"
+                                  name="message"
+                                  id="message"
+                                  placeholder="Write your message..."
+                                  class="formbold-form-input"
+                              ></textarea>
+                              <label for="message" class="formbold-form-label"> Message </label>
+                          </div>
+                  
+                          <!-- <div class="formbold-input-file">
+                            <div class="formbold-filename-wrapper">
+                              <span class="formbold-filename">
+                                website-information-architecture.pdf
+                  
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1670_1541)">
+                                <path d="M9.00005 7.93906L12.7126 4.22656L13.7731 5.28706L10.0606 8.99956L13.7731 12.7121L12.7126 13.7726L9.00005 10.0601L5.28755 13.7726L4.22705 12.7121L7.93955 8.99956L4.22705 5.28706L5.28755 4.22656L9.00005 7.93906Z" fill="#536387"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1670_1541">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                              </span>
+                  
+                              <span class="formbold-filename">
+                                website-logo.png
+                  
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1670_1541)">
+                                <path d="M9.00005 7.93906L12.7126 4.22656L13.7731 5.28706L10.0606 8.99956L13.7731 12.7121L12.7126 13.7726L9.00005 10.0601L5.28755 13.7726L4.22705 12.7121L7.93955 8.99956L4.22705 5.28706L5.28755 4.22656L9.00005 7.93906Z" fill="#536387"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1670_1541">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                              </span>
+                            </div>
+                            <label for="upload" class="formbold-input-label">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1670_1531)">
+                                <path d="M12.3568 6.4644L7.64349 11.1786C7.5639 11.2554 7.50041 11.3474 7.45674 11.4491C7.41307 11.5507 7.39008 11.6601 7.38912 11.7707C7.38815 11.8814 7.40924 11.9911 7.45114 12.0935C7.49304 12.1959 7.55492 12.289 7.63316 12.3672C7.71141 12.4455 7.80445 12.5073 7.90686 12.5492C8.00928 12.5912 8.11901 12.6122 8.22966 12.6113C8.34031 12.6103 8.44966 12.5873 8.55133 12.5436C8.653 12.5 8.74495 12.4365 8.82182 12.3569L13.536 7.64356C14.0049 7.17468 14.2683 6.53875 14.2683 5.87565C14.2683 5.21255 14.0049 4.57661 13.536 4.10773C13.0671 3.63885 12.4312 3.37544 11.7681 3.37544C11.105 3.37544 10.469 3.63885 10.0002 4.10773L5.28599 8.8219C4.89105 9.20701 4.57652 9.6667 4.36062 10.1743C4.14473 10.6819 4.03178 11.2274 4.02832 11.779C4.02487 12.3306 4.13097 12.8774 4.34049 13.3877C4.55 13.8979 4.85876 14.3615 5.24884 14.7516C5.63892 15.1416 6.10256 15.4503 6.61287 15.6597C7.12318 15.8692 7.67 15.9752 8.2216 15.9717C8.77321 15.9681 9.31862 15.8551 9.82621 15.6391C10.3338 15.4232 10.7934 15.1086 11.1785 14.7136L15.8927 10.0002L17.071 11.1786L12.3568 15.8927C11.8151 16.4344 11.172 16.8641 10.4643 17.1573C9.75649 17.4505 8.99791 17.6014 8.23182 17.6014C7.46574 17.6014 6.70716 17.4505 5.99939 17.1573C5.29162 16.8641 4.64853 16.4344 4.10682 15.8927C3.56512 15.351 3.13542 14.7079 2.84225 14.0002C2.54908 13.2924 2.39819 12.5338 2.39819 11.7677C2.39819 11.0016 2.54908 10.2431 2.84225 9.5353C3.13542 8.82753 3.56512 8.18443 4.10682 7.64273L8.82182 2.9294C9.60767 2.17041 10.6602 1.75043 11.7527 1.75992C12.8451 1.76942 13.8902 2.20762 14.6627 2.98015C15.4353 3.75269 15.8735 4.79774 15.883 5.89023C15.8925 6.98271 15.4725 8.03522 14.7135 8.82106L10.0002 13.5369C9.76794 13.7691 9.49226 13.9532 9.18887 14.0788C8.88548 14.2045 8.56032 14.2691 8.23195 14.2691C7.90357 14.269 7.57843 14.2043 7.27507 14.0786C6.97171 13.9529 6.69607 13.7687 6.46391 13.5365C6.23174 13.3043 6.04759 13.0286 5.92196 12.7252C5.79633 12.4218 5.7317 12.0966 5.73173 11.7683C5.73177 11.4399 5.79649 11.1148 5.92219 10.8114C6.04788 10.508 6.2321 10.2324 6.46432 10.0002L11.1785 5.28606L12.3568 6.4644Z" fill="#07074D"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1670_1531">
+                                <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                Attach files
+                                <input type="file" name="upload" id="upload">
+                            </label>
+                          </div> -->
+
+                            <button class="presentation-orange-button">
+                                <div class="original">send message</div>
+                                <div class="letters">
+                                        <span>s</span>
+                                        <span>e</span>
+                                        <span>n</span>
+                                        <span>d</span>
+                                </div>
+                            </button>
+                        
+                      </form>
+                    </div>
+                    <%  } %>
+                </div>
+                <!-- <div class="inputs-container">
+                    <div class="inputs">
+                        <div class="input-div">
+                            <input type="text" placeholder="name">
+                        </div>
+
+                        <div class="input-div">
+                        <input type="text" placeholder="email address">
+                        </div>
+                        <div class="input-div">
+                        <input type="text" placeholder="phone">
+                        </div>
+                        <div class="input-div">
+                        <input type="text" placeholder="Email object">
+                       </div>
+                       
+                        <textarea name="" id="email-message" placeholder="your message"></textarea>
+                       
+                        <div class="button-div">
+                           <button type="button"> Send </button>
+                       </div>
+                    </div> -->
+                <!-- </div> -->
+            
+            </div>
+
+            <footer>
+                <div id="foot">
+                    <p>&copy; 2024 Pietro Emanuele Vitali. All rights reserved.</p>
+                    <p>We value your privacy. This website does not collect, store, or use your personal data.</p>
+                </div>
+                
+            </footer>
+
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

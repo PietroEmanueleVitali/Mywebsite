@@ -1,0 +1,71 @@
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-details .title {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 20px 0px 20px 0px;
+}
+
+
+.contact-image {
+    border-radius: 50%;
+    transition: 0.5s;
+    background-color: #FFDDAE;
+    fill: white;
+    margin-right: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}
+ .contact-image svg {
+    margin: 1px;
+ }
+
+.contact-image:hover {
+    background-color: black;
+    fill: white;
+}
+
+.contact-specifics {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-specifics:hover {
+    border-bottom: 1px solid #FFDDAE;
+    box-shadow: 0px 2px 3px #FFDDAE;
+}
+
+.contact-specifics .paragraph-specifics {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.map iframe {
+    width: 90%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .contact-specifics p {
+        font-size: 10px;
+    }
+}

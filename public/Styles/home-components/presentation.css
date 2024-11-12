@@ -1,0 +1,328 @@
+
+#presentation {
+    grid-column-start:2 ;
+    grid-column-end: 3;
+    background-color: #FBFBFB;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 10%;
+    height: 70vh;
+}
+
+
+
+#presentation .presentation-animation {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    align-items: flex-end;
+}
+
+#presentation .presentation-name {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#presentation .presentation-buttons{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: flex-start;
+    height: 20%;
+}
+
+.presentation-buttons form:first-child{
+    margin-right: 5%;
+}
+
+.presentation-buttons form button{
+    margin-right: 5%;
+    width: 100%;
+}
+.presentation-buttons form button{
+    margin-right: 5%;
+    width: 100%;
+}
+
+
+
+.presentation-orange-button,
+.presentation-orange-button *,
+.presentation-orange-button :after,
+.presentation-orange-button :before,
+.presentation-orange-button:after,
+.presentation-orange-button:before {
+  /* border: 0px solid; */
+  box-sizing: border-box;
+}
+
+.presentation-orange-button {
+  /* -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button; */
+  background-color: black;
+  /* background-image: none; */
+  color: white;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 100%;
+  font-weight: bolder;
+
+  /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+  padding: 0;
+  text-shadow: 1px 1px #222324;
+}
+
+.presentation-orange-button:disabled {
+  cursor: default;
+}
+
+.presentation-orange-button:-moz-focusring {
+  outline: auto;
+}
+
+.presentation-orange-button svg {
+  display: block;
+}
+
+.presentation-orange-button [hidden] {
+  display: none;
+} 
+
+.presentation-orange-button {
+  border: 1px solid black; 
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.presentation-orange-button .original {
+  background: #FFDDAE;
+  color: white;
+  border: 10px solid #FFDDAE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  font-weight: 900;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.presentation-orange-button:hover .original {
+  transform: translateY(100%);
+}
+
+.presentation-orange-button .letters {
+    display: inline-flex;
+    position: relative;
+
+}
+
+.presentation-orange-button span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.presentation-orange-button span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.presentation-orange-button:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.presentation-orange-button:hover span:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.presentation-orange-button:hover span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.presentation-orange-button:hover span:nth-child(4) {
+  transition-delay: 0.5s;
+}
+
+
+
+
+.presentation-black-button,
+.presentation-black-button *,
+.presentation-black-button :after,
+.presentation-black-button :before,
+.presentation-black-button:after,
+.presentation-black-button:before {
+  /* border: 0px solid; */
+  box-sizing: border-box;
+}
+
+.presentation-black-button {
+  /* -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button; */
+  background-color: black;
+  /* background-image: none; */
+  color: white;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 100%;
+
+  /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+  padding: 0;
+  text-shadow: 1px 1px #222324;
+}
+
+.presentation-black-button:disabled {
+  cursor: default;
+}
+
+.presentation-black-button:-moz-focusring {
+  outline: auto;
+}
+
+.presentation-black-button svg {
+  display: block;
+}
+
+.presentation-black-button [hidden] {
+  display: none;
+} 
+
+.presentation-black-button {
+  border: 1px solid black; 
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.presentation-black-button .original {
+  background: #FFDDAE;
+  color: white;
+  border: 10px solid #FFDDAE;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  font-weight: 900;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.presentation-black-button:hover .original {
+  transform: translateY(100%);
+}
+
+.presentation-black-button .letters {
+    display: inline-flex;
+    position: relative;
+
+}
+
+.presentation-black-button span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.presentation-black-button span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.presentation-black-button:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.presentation-black-button:hover span:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.presentation-black-button:hover span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.presentation-black-button:hover span:nth-child(4) {
+  transition-delay: 0.5s;
+}
+
+
+.word {
+    grid-column-start:1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: left;
+    color: #FFDDAE;
+    font: 700 normal 2.5em 'tahoma';
+    font-size: 10vh;
+    text-shadow: 1px 1px black;
+  }
+
+  @media screen and (max-width:1000px) {
+    .word {
+      height: 25vh;
+      display: flex;
+    }
+    #presentation {
+      display: flex;
+      flex-direction: column;
+      padding: 5%;
+    }
+  }
+/*
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+} */

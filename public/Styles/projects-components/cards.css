@@ -1,0 +1,313 @@
+.cards-position
+{
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    height: 40vh;
+}
+.card {
+    overflow: visible;
+    width: 30%;
+    height: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #FFDDAE;
+    border-radius: 5px;
+  }
+  
+  .front, .back {
+    background-color: #E4E0E1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+    animation: rotation_481 5000ms infinite linear;
+  }
+  
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #E4E0E1;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .back-content svg {
+    filter: invert(1);
+    stroke: white;
+  }
+  
+  .card:hover .content {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+  .front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .front-content .badge {
+    background-color: #00000055;
+    padding: 2px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+  }
+  
+  .description {
+    box-shadow: 0px 0px 10px 5px #00000088;
+    width: 100%;
+    padding: 3px 3px 3px 3px;
+    background-color: #00000099;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 11px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .title p {
+    width: 100%;
+  }
+  
+  .card-footer {
+    width: 100%;
+    color: #ffffff88;
+    margin: 5px 0px 0px 0px;
+    font-size: 8px;
+  }
+    .container-button
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+  .container-button button {
+    width: 20%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-orange-button,
+  .card-orange-button *,
+  .card-orange-button :after,
+  .card-orange-button :before,
+  .card-orange-button:after,
+  .card-orange-button:before {
+    /* border: 0px solid; */
+    box-sizing: border-box;
+  }
+  
+  .card-orange-button {
+    height: 25%;
+    /* -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button; */
+    background-color: black;
+    /* background-image: none; */
+    color: white;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 75%;
+    line-height: 100%;
+  
+    /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+    padding: 0;
+    text-shadow: 1px 1px #222324;
+  }
+  
+  .card-orange-button:disabled {
+    cursor: default;
+  }
+  
+  .card-orange-button:-moz-focusring {
+    outline: auto;
+  }
+  
+  .card-orange-button svg {
+    display: block;
+  }
+  
+  .card-orange-button [hidden] {
+    display: none;
+  } 
+  
+  .card-orange-button {
+    border: 1px solid black; 
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .card-orange-button .original {
+    background: #FFDDAE;
+    color: white;
+    border: 10px solid #FFDDAE;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  
+  .card-orange-button:hover .original {
+    transform: translateY(100%);
+  }
+  
+  .card-orange-button .letters {
+      display: inline-flex;
+      position: relative;
+      bottom: 0.5em;
+  
+  }
+  
+  .card-orange-button span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+  }
+  
+  .card-orange-button span:nth-child(2n) {
+    transform: translateY(15px);
+  }
+  
+  .card-orange-button:hover span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-orange-button:hover span:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  
+  .card-orange-button:hover span:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  
+
+
+  .front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  #bottom {
+    background-color: #ff8866;
+    left: 50px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    animation-delay: -800ms;
+  }
+  
+  #right {
+    background-color: #ff2233;
+    left: 160px;
+    top: -80px;
+    width: 30px;
+    height: 30px;
+    animation-delay: -1800ms;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+  .cards-position {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .card {
+    width: 75%;
+    height: 300px;
+    margin: 10%;
+}
+
+.card-orange-button {
+  margin: 10px;
+}
+
+.description {
+  width: 92%;
+}
+}
+

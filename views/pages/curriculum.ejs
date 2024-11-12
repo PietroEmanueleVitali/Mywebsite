@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/navbar.css">
+    <link rel="stylesheet" href="./Styles/curriculum-components/grid.css">
+    <link rel="stylesheet" href="./Styles/curriculum-components/curriculum.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Styles/fonts.css">
+
+    <title>Curriculum</title>
+</head>
+
+<body>
+  
+    <div id="root">
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <header id="side-bar">
+                <%- include('./components/navbar.ejs') %>
+            </header>
+        </div>
+        
+        <span class="span-button" style="font-size:30px;cursor:pointer" onclick="openNav()"><p style="margin-top: 0px; color: white; border: 1px solid rgba(0, 0, 0, .2); padding: 10px; background-color: #D4F6FF;"> &#9776; </p></span>
+    
+            <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "100%";
+                  document.getElementById('side-bar').style.display = 'grid';
+                  document.getElementById('side-bar').style.height = '95vh';
+                  // background-color: #D4F6FF;
+        // position: fixed;
+        // display: grid;
+        // grid-template-rows: 0.75fr 0.01fr 1.5fr 0.5fr;
+        // height: 100vh;
+        // width: 30vh;
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById('side-bar').style.display = 'none';
+                  document.getElementById('side-bar').style.height = '0';
+                }
+                </script>
+
+
+        <div class="right-components">
+            <div class="button-container">
+                <h1 class="merriweather-black-skills" style="margin-bottom: 2%;">Italian version</h1>
+
+                <form action="/curriculum-download" type="get">
+                <button class="presentation-orange-button" type="submit">
+                    <div class="original">download</div>
+                    <div class="letters">
+                            <span>p</span>
+                            <span>d</span>
+                            <span>f</span>
+                    </div>
+                  </button>
+                </form>
+            </div>
+            
+            <hr>
+            
+            <div class="cv-page">
+                <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+                padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                border-radius: 8px; will-change: transform;">
+                 <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                   src="https://www.canva.com/design/DAGWKo_mKEw/FLN3s1_gIy8bCHP0rHyJCA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                 </iframe>
+               </div>
+                <!-- <div class="header-left">
+                        <h1>Pietro Emanuele Vitali</h1>
+                        <p>it expert</p>
+                </div>
+                <div class="header-right">
+                    <p>email</p>
+                    <p>phone number</p>
+                    <p>address</p>
+                    <p>linkedin</p>
+                </div>
+
+                <hr>
+                
+                <div class="introduction-photo">
+                      <div class="img-cv">
+                        <img src="./imges/myPhoto.jpg" alt="myPhoto">
+                    </div>
+                    <div class="introduction">
+                        <p>
+                            A renewed passion for programming, particularly web development, has led me to seek a new direction in my career despite positive experiences in my previous field. I am an enthusiastic and proactive worker, able to adapt quickly to change. My past work experiences have greatly strengthened my communication skills, both in client interactions and teamwork. I am looking for a stimulating work environment that fosters learning and personal skill development.
+                        </p>
+                    </div>
+               </div>
+               
+               <hr>
+               
+               <div class="working-experience">
+                    <h1>
+                        Esperienza Lavorativa 
+                    </h1>
+                 
+                    <h2>
+                        Personal Trainer
+                    </h2>
+                    <p>lorem ipsum</p>
+                    <h1>Teacher</h1>
+                    <hr>
+                    <h1>Hard Skills</h1>
+
+               </div>  
+               <div class="Skills">
+                    <h1>
+                        Education
+                    </h1>
+                    <ul>
+                        <li>
+                            University
+                        </li>
+                    </ul>
+                    <h1>
+                        Languages
+                    </h1>
+                    <ul>
+                        <li>Italian</li>
+                    </ul>
+                    <h1>Interest</h1>
+                    <ul>
+                        <li>I like breathing</li>
+                    </ul>
+                    <h1>Soft Skills</h1>
+                    <ul>
+                        <li>communication</li>
+                    </ul>
+                    <h1>Courses</h1>
+                        <ul>
+                            <li>Web development bootcamp</li>
+                        </ul>
+               </div> -->
+            </div>
+             
+
+                </div>
+        </div>
+    </div>
+    
+
+</body> 
+
+</html>

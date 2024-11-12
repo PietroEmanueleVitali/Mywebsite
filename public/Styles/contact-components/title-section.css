@@ -1,0 +1,17 @@
+.title-contact-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+}
+
+.title-contact-me h1, .title-contact-me p {
+    width: 90%;
+    text-align: center;
+}
+
+.links-in-contacs {
+    fill: white;
+}

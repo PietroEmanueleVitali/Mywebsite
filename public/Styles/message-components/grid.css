@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  font-weight: normal;
+}
+body {
+    margin: 0;
+}
+#root {
+    display: grid;
+    grid-template-columns: 30vh 1fr;
+}
+
+.right-container-flex
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.right-container {
+  
+    display: grid;
+    grid-template-rows: 1fr 0.1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.get-in-touch {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.sepration
+{
+    background-color: black;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.center-inputs {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+footer {
+    /* grid-column-start: 2;
+    grid-column-end: -1; */
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+footer p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 100%;
+  border-top: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+
+  .sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #D4F6FF;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .sidenav a {
+      /* padding: 8px 8px 8px 32px; */
+      text-decoration: none;
+      /* font-size: 25px; */
+      color: white;
+      display: block;
+      transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .span-button {
+    display: none;
+  }
+
+  .closebtn {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 1000px){
+
+    #root {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .span-button {
+      display: block;
+    }
+
+    .sidenav {
+      padding-top: 60px;
+    }
+    
+    .closebtn {
+        position: absolute;
+        z-index: 1;
+        /* left: 10px; */
+        /* padding: 0; */
+        /* position: relative; */
+        top: 1px;
+        right: 50px;
+        font-size: 50px;
+    }
+
+    .right-container {
+      display: grid;
+      grid-template-rows: 0.6fr 0.1fr 2fr 1fr;
+      grid-template-columns: 1fr;
+  }
+}

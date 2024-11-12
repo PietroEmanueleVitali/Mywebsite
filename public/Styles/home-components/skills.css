@@ -1,0 +1,157 @@
+#skills{
+    background-color: #FBFBFB;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.what-i-can-do {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    margin: 5% 5% 5% 5%;
+}
+
+
+.what-i-can-do-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: left;
+}
+
+.what-i-can-do-title h1, .what-i-can-do-title svg {
+    display: inline;
+}
+
+.what-i-can-do .what-i-can-do-paragraph{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.what-i-can-do div p{
+    width: 70%;
+}
+.what-i-can-do div button{
+    width: 25%;
+    height: 50%;
+    align-self: center;
+}
+
+/* .what-i-can-do .presentation-orange-button .letters {
+    display: inline-flex;
+    position: relative;
+    } */
+
+
+/*button handling */
+
+#home-button-skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#skill-button {
+    width: 100%;
+    height: 6vh;
+}
+
+.button-flexbox {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button-flexbox button{
+    width: 20%;
+    margin: 1%;
+
+}
+.single-button {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    justify-content: space-evenly;
+}
+
+.button-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-button svg {
+    align-self: left;
+}
+
+.button-flexbox button h1 {
+    text-align: left;
+    margin-top: 2%;
+    padding: 0px;
+    font-size: 18px;
+}
+
+.button-flexbox p {
+    text-align: left;
+}
+
+  .single-skill {
+    display: flex;
+    justify-content: flex-start;
+  } 
+
+  .single-button {
+    padding: 15px 20px;
+    background-color: #FBFBFB;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* background-color: transparent; */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .single-button:hover {
+    border-color: #FFDDAE;
+    box-shadow: 0 0 20px #FFDDAE;
+  }
+  
+  .single-button:active {
+    box-shadow: 0 0 10px rgba(9, 117, 241, 0.4);
+  }
+
+  @media screen and (max-width: 1000px) {
+    .what-i-can-do {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        margin: 5% 5% 5% 5%;
+    }
+
+    .what-i-can-do-paragraph {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-flexbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .button-flexbox button {
+        width: 75%;
+        margin: 1%;
+    }
+
+    #skill-button {
+        margin-top: 2%;
+        width: 40%;
+        height: 5vh;
+    }
+  }

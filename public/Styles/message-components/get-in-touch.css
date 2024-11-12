@@ -1,0 +1,13 @@
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10% 0% 0% 5%;
+    height: 5%;
+}
+.get-in-touch-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}

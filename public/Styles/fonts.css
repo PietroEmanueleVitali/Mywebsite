@@ -1,0 +1,70 @@
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  .merriweather-black-skills {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+  }
+  .source-sans-3-presentation-single-skills-p {
+    
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 2%;
+  }
+
+  .merriweather-black-italic-presentation {
+    color: #FFDDAE;
+    font: 700 normal 2.5em 'tahoma';
+    font-size: 7vh;
+    text-shadow: 1px 1px black;
+}
+
+
+  .source-sans-3-presentation-p {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vh;
+    margin-bottom: 2%;
+  }
+  .source-sans-3-presentation-h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-size: 2vh;
+    margin-bottom: 2%;
+  }
+
+  .source-sans-3-presentation-single-skill-h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-size: 1vh;
+    margin-bottom: 2%;
+  }
+
+  .source-sans-3-presentation-single-skill-p {
+
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 2%;
+
+  }
+
+  .source-sans-3-text {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    margin-top: 1%;
+  }
