@@ -66,8 +66,7 @@ app.post('/message', (req, res) => {
         text: req.body.message + '\n' + req.body.email + '\n' + 'Phone: ' + req.body.phone, 
       };
 
-    // console.log(req.body.firstname);
-    // res.send('ok');
+
 
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -80,7 +79,7 @@ app.post('/message', (req, res) => {
 
 })
 
-//Function to create servers for multiple IP addresses
+/*
 function createServers(ipAddresses, port) {
   ipAddresses.forEach(ip => {
       const server = http.createServer(app);
@@ -89,7 +88,7 @@ function createServers(ipAddresses, port) {
           console.log(`Server running on http://${ip}:${port}`);
       });
 
-      // Error handling
+     
       server.on('error', (error) => {
           if (error.code === 'EADDRNOTAVAIL') {
               console.error(`Error: IP address ${ip} is not available`);
@@ -99,17 +98,17 @@ function createServers(ipAddresses, port) {
       });
   });
 }
-
+*/
 
 
 
 
 // Example usage
-const ips = [
-  '3.75.158.163',      
-  '3.125.183.140',   
-  '35.157.117.28'         
-];
+//const ips = [
+ // '3.75.158.163',      
+//  '3.125.183.140',   
+ // '35.157.117.28'         
+//];
 
-createServers(10000, ips);
-// app.listen (3000);
+//createServers( ips,10000);
+app.listen (10000);
